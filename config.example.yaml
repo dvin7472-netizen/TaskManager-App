@@ -1,0 +1,28 @@
+files:
+  input_file: ./templates/sprint_tasks.xlsx
+  template_file: ./templates/master_template.pptx
+  output_file: ./output/sprint_report.pptx
+
+sprint:
+  # When both dates are omitted, the application infers the range from task dates and logs.
+  start_date: "2026-06-01"
+  end_date: "2026-06-14"
+  # Optional exact sprint-name filter. Omit or set null to include all sprints in range.
+  name: "Sprint 12"
+
+llm:
+  # LiteLLM model identifiers: openai/gpt-4o-mini, anthropic/claude-3-5-haiku-latest,
+  # ollama/llama3.1. For Ollama, set api_base to the local Ollama endpoint if needed.
+  model: "ollama/llama3.1"
+  temperature: 0.2
+  max_tokens: 300
+  timeout: 45
+  api_key_env: "OPENAI_API_KEY"
+  # api_base: "http://localhost:11434"
+
+powerpoint:
+  # Set these to layout indexes in the master template; 6 (Blank) is typical for the default theme.
+  summary_layout_index: 6
+  developer_layout_index: 6
+
+log_level: INFO

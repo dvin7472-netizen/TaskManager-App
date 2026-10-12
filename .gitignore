@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+config.yaml
+output/
+uploads/
+sprint_report.pptx
+*.xlsx
+!templates/*.xlsx
+!templates/.gitkeep
